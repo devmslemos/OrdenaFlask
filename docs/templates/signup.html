@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordena</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="{{ url_for('static', filename='images/Imagem.svg') }}" alt="Imagem de Agendamento">
+        </div>
+        <div class="form">
+            <form action="https://webhook.site/71f25963-94b6-4d05-97f9-9ed3ebbc55c9" method="post">
+                <div class="form-logo">
+                    <div class="Logo">
+                        <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Logo">
+                    </div>
+                </div>
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Crie sua Conta</h1>
+                    </div>
+                </div>
+    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome *</label>
+                        <input id="firstname" name="firstname" type="text" placeholder="Digite seu Nome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome *</label>
+                        <input id="lastname" name="lastname" type="text" placeholder="Digite seu Sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email *</label>
+                        <input id="email" name="email" type="email" placeholder="Digite seu E-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha *</label>
+                        <input id="password" name="password" type="password" placeholder="Digite sua Senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmpassword">Confirme sua Senha *</label>
+                        <input id="confirmpassword" name="confirmpassword" type="password" placeholder="Confirme sua Senha" required>
+                    </div>
+                </div>
+    
+                <div class="signup-button">
+                    <button type="submit">Crie sua Conta</button>
+                </div>
+                <br>
+                <div class="termos">
+                    <label for="termos">Ao continuar você está de acordo com nossos <b>Termos de Uso</b> e <b>Política de Privacidade</b></label>
+                </div>
+                <br>
+                <div class="login-button">
+                    <label for="login-button">Já possui conta?</label>
+                    <a href="{{ url_for('login') }}"><button type="button">Entrar</button></a>
+                </div>
+                <div class="backhome">
+                    <a href="{{ url_for('home') }}">Voltar para Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

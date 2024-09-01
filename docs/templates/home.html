@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar - Ordena</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#">Conteúdos</a>
+            <a href="#">Novidades</a>
+            <a href="#">Recursos</a>
+            <a href="#">Planos</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="{{ url_for('login') }}">Entrar</a>
+            <a href="{{ url_for('signup') }}">Cadastre-se</a>
+        </div>
+    </nav>
+
+    <div class="homepagecontent">
+        <p>teste</p>
+    </div>
+
+
+
+</body>
+
+
+</html>

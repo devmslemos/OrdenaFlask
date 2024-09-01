@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+.navbar .logo img {
+    width: 9rem; 
+    height: auto;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.navbar .nav-links a {
+    color: #4E1BC5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem;
+    border-radius: 5px;
+    white-space: nowrap; 
+}
+
+.navbar .nav-links a:hover {
+    color: #ddd;
+    background-color: #3d1e8e;
+}
+.navbar .auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar .auth-buttons a {
+    background-color: white;
+    color: #4E1BC5;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+}
+
+.navbar .auth-buttons a:hover {
+    background-color: #ddd;
+    color: #4E1BC5;
+    border-color: #4E1BC5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    padding-top: 3rem; 
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+    .navbar .auth-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

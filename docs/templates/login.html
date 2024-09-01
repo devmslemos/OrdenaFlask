@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ordena</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="{{ url_for('static', filename='images/Imagem.svg') }}" alt="Imagem de Login">
+        </div>
+        <div class="form">
+            <form action="https://webhook.site/71f25963-94b6-4d05-97f9-9ed3ebbc55c9" method="post">
+                <div class="form-logo">
+                    <div class="Logo">
+                        <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Logo">
+                    </div>
+                </div>
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Entrar na sua Conta</h1>
+                    </div>
+                </div>
+    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="email">Email *</label>
+                        <input id="email" name="email" type="email" placeholder="Digite seu E-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha *</label>
+                        <input id="password" name="password" type="password" placeholder="Digite sua Senha" required>
+                    </div>
+                </div>
+    
+                <div class="login-button">
+                    <button type="submit">Entrar</button>
+                </div>
+                <br>
+                <div class="signup-button">
+                    <label for="signup-button">Não possui conta?</label>
+                    <a href="{{ url_for('signup') }}"><button type="button">Cadastrar</button></a>
+                </div>
+                <div class="backhome">
+                    <a href="{{ url_for('home') }}">Voltar para Home</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
