@@ -15,5 +15,22 @@ def login():
 def signup():
     return render_template('signup.html')
 
+@app.route('/conteudos')
+def conteudos():
+    return render_template('conteudos.html')
+
+@app.route('/novidades')
+def novidades():
+    return render_template('novidades.html')
+
+@app.route('/recursos')
+def recursos():
+    return render_template('recursos.html')
+
+@app.route('/planos')
+def planos():
+    return render_template('planos.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-body{
+html,body{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -8,6 +8,7 @@ body{
     justify-content: center;
     background-color: #4E1BC5;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
     
 
 
@@ -18,6 +19,7 @@ body{
     height: 80vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(0,0,0,.212);
+    overflow: hidden;
 
 }
 
@@ -46,6 +48,7 @@ body{
     flex-direction: column;
     background-color: #fff;
     padding: 3rem;
+    overflow: hidden;
 }
 
 .form-header{
@@ -158,7 +161,7 @@ body{
     }
     
 }
-@media screen and (max-width: 1163px) {
+@media screen and (max-width: 1180px) {
     .container {
         width: 100%;
         height: auto;
@@ -232,6 +235,14 @@ body{
     .input-box input {
         padding: 0.2rem 0.3rem; 
         box-sizing: border-box;
+        height: 2.5rem;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
     }
     .signup-button button {
         padding: 0.6rem;

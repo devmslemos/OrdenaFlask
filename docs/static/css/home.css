@@ -1,12 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    padding-top: 3rem;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+
+h1{
+    color: #fff; 
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+
+h2{
+    color: #4E1BC5; 
+    margin: 1rem 0;
+}
+p{
+    color: #fff;
+    margin: 1rem 0;
+}
+
+a {
+    color: #4E1BC5; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #3d1e8e; 
+}
+/* Estilos Gerais */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -37,7 +74,8 @@
 }
 
 .navbar .nav-links a:hover {
-    color: #ddd;
+    color: #fff;
+    font-weight: 700;
     background-color: #3d1e8e;
 }
 .navbar .auth-buttons {
@@ -49,24 +87,100 @@
     background-color: white;
     color: #4E1BC5;
     padding: 0.4rem 1rem;
-    border-radius: 20px;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s;
     border: 2px solid transparent;
 }
 
 .navbar .auth-buttons a:hover {
-    background-color: #ddd;
-    color: #4E1BC5;
+    color: #fff;
+    font-weight: 700;
+    background-color: #3d1e8e;
     border-color: #4E1BC5;
 }
 
-body {
-    margin: 0;
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 0rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    background: #4E1BC5;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+}
+
+.content{
+    flex: 1;
+    width: 50%;
+    padding: 1rem;
+    text-align: left;
+}
+
+.img-home{
+    flex: 1;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+
+}
+
+.img-home img{
+    width: 100%;
+    width: 25rem;
+    
+}
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.middle{
+    overflow: hidden;
+    width: 60%;
+    padding: 0 3rem;
+}
+
+.services-list, .how-works {
+    list-style: none; /* Remove os marcadores padrão da lista */
     padding: 0;
-    font-family: 'Inter', sans-serif;
-    padding-top: 3rem; 
+    margin: 0;
+    gap: 0.5rem;
+    display: flex;
+}
+
+.services-list li, .how-works li{
+    background-color: #f0f0f0; /* Cor de fundo da caixinha */
+    border: 1px solid #ddd; /* Borda da caixinha */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 1rem; /* Preenchimento interno da caixinha */
+    margin-bottom: 1rem; /* Espaçamento entre as caixinhas */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar efeito de profundidade */
+    transition: transform 0.2s; /* Transição suave para o efeito hover */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services-list li:hover, .how-works li:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente a caixinha ao passar o mouse */
+    background-color: #4E1BC5;
+    color: #fff;
+}
+
+.footer{
+    color: #fff;
+    padding: 1rem;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
