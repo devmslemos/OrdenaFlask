@@ -6,7 +6,7 @@ Matheus Santos Lemos RA: 202202673757
 
 Gustavo
 
-Agenda Pro Web
+Ordena, sua Plataforma de Agendamento Online.
 
 Introdução
 --
