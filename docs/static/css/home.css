@@ -124,16 +124,13 @@ div.middle{
     margin-top: 0rem;
     overflow: hidden;
     align-items: center;
-    justify-content: center;
     padding: 0 3rem;
     background: #4E1BC5;
     box-shadow: 0 8px 8px rgba(0,0,0,0.1);
 }
 
 .content{
-    flex: 1;
     width: 50%;
-    padding: 1rem;
     text-align: left;
 }
 
@@ -149,8 +146,8 @@ div.middle{
 }
 
 .img-home img{
-    width: 100%;
-    width: 25rem;
+    width: 20rem;
+    height: 15rem;
     
 }
 .menu-toggle {
@@ -316,6 +313,7 @@ div.middle{
     .nav-links.active {
         display: flex; 
     }
+
     
     .menu-toggle {
         display: flex;
