@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Conteúdos - Ordena</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="{{ url_for('conteudos') }}">Conteúdos</a>
+            <a href="{{ url_for('novidades') }}">Novidades</a>
+            <a href="{{ url_for('recursos') }}">Recursos</a>
+            <a href="{{ url_for('planos') }}">Planos</a>
+            <a href="mailto:contato.ordenasch@gmail.com?subject=Assunto%20do%20Email&body=Escreva%20sua%20mensagem%20aqui.">Contato</a>
+            <a href="{{ url_for('login') }}">Entrar</a>
+            <a href="{{ url_for('signup') }}">Cadastre-se</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="text-shadow">Conteúdos</h1>
+            <p class="text-shadow">
+                Descubra uma variedade de conteúdos exclusivos disponíveis na nossa plataforma. 
+                <br><br>
+                Nosso objetivo é fornecer informações valiosas e recursos úteis para ajudá-lo a maximizar o uso dos serviços disponíveis e aprimorar sua experiência com o Ordena.
+            </p>
+        </div>
+    </div>
+
+    <div class="middle">
+        <h2>Artigos Recentes:</h2>
+        <ul class="content-list">
+            <li>
+                <h3>Como Maximizar o Uso da Plataforma Ordena</h3>
+                <p>Aprenda dicas e truques para aproveitar ao máximo as funcionalidades da nossa plataforma.</p>
+                <a href="#">Leia mais</a>
+            </li>
+            <li>
+                <h3>Benefícios dos Agendamentos Online</h3>
+                <p>Entenda por que os agendamentos online são a melhor opção para gerenciar seu tempo.</p>
+                <a href="#">Leia mais</a>
+            </li>
+            <li>
+                <h3>Como Escolher o Melhor Serviço para Você</h3>
+                <p>Dicas para selecionar o serviço certo de acordo com suas necessidades.</p>
+                <a href="#">Leia mais</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <ul class="socialmedia-list">
+                <li><a href="https://www.instagram.com"><img class="ins-icon" src="{{ url_for('static', filename='images/instagram.svg') }}" alt=""> Instagram</a></li>
+                <li><a href="https://www.youtube.com"><img class="ytb-icon" src="{{ url_for('static', filename='images/youtube.svg') }}" alt=""> Youtube</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

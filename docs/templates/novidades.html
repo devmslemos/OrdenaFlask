@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Novidades - Ordena</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="{{ url_for('conteudos') }}">Conteúdos</a>
+            <a href="{{ url_for('novidades') }}">Novidades</a>
+            <a href="{{ url_for('recursos') }}">Recursos</a>
+            <a href="{{ url_for('planos') }}">Planos</a>
+            <a href="mailto:contato.ordenasch@gmail.com?subject=Assunto%20do%20Email&body=Escreva%20sua%20mensagem%20aqui.">Contato</a>
+            <a href="{{ url_for('login') }}">Entrar</a>
+            <a href="{{ url_for('signup') }}">Cadastre-se</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1 class="text-shadow">Novidades</h1>
+            <p class="text-shadow">
+                Fique atualizado com as últimas notícias e atualizações sobre nossa plataforma.
+                <br><br>
+                Aqui você encontrará informações sobre novos recursos, melhorias e eventos especiais que podem impactar sua experiência com o Ordena.
+            </p>
+        </div>
+    </div>
+
+    <div class="middle">
+        <h2>Últimas Atualizações:</h2>
+        <ul class="news-list">
+            <li>
+                <h3>Nova Funcionalidade de Notificações</h3>
+                <p>Agora você pode receber notificações em tempo real para os seus agendamentos e eventos importantes.</p>
+                <a href="#">Leia mais</a>
+            </li>
+            <li>
+                <h3>Integração com Calendários</h3>
+                <p>Adicionamos a opção de sincronizar seus agendamentos com os calendários do Google e Outlook.</p>
+                <a href="#">Leia mais</a>
+            </li>
+            <li>
+                <h3>Novos Parceiros de Serviços</h3>
+                <p>Expandimos nossa rede de prestadores de serviços para oferecer mais opções para você.</p>
+                <a href="#">Leia mais</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <ul class="socialmedia-list">
+                <li><a href="https://www.instagram.com"><img class="ins-icon" src="{{ url_for('static', filename='images/instagram.svg') }}" alt=""> Instagram</a></li>
+                <li><a href="https://www.youtube.com"><img class="ytb-icon" src="{{ url_for('static', filename='images/youtube.svg') }}" alt=""> Youtube</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
